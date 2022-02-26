@@ -227,8 +227,7 @@ class resolve_redirects:
                 else:
                     summary['resolved_key'] = thing.key
 
-            for i, _ in enumerate(summary['redirect_chain']):
-                r = summary['redirect_chain'][i]
+            for r in summary['redirect_chain']:
                 olid = r['key'].split('/')[-1][2:-1]
                 new_olid = summary['resolved_key'].split('/')[-1][2:-1]
 
